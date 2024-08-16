@@ -48,8 +48,13 @@ xin_ai/
 │   ├── test_data_preprocessing.py
 │   ├── test_model_training.py
 │   └── test_model_evaluation.py
-└── models/
-    └── .gitkeep  # Placeholder to ensure the directory is tracked by git
+├── models/
+│   └── .gitkeep
+├── scripts/
+│   ├── start-spark-master.sh
+│   ├── start-spark-worker.sh
+│   └── stop-spark-cluster.sh
+└── .gitignore
 ```
 
 ## Setup
