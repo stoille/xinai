@@ -1,0 +1,11 @@
+text,label
+This movie was amazing! I loved every minute of it.,1
+The acting was terrible and the plot made no sense.,0
+I can't decide if I liked this film or not.,0
+The special effects were mind-blowing!,1
+What a waste of time and money.,0
+The soundtrack perfectly complemented the visuals.,1
+I fell asleep halfway through the movie.,0
+This is a must-watch for any fan of the genre.,1
+The dialogue was so cringeworthy.,0
+I'm looking forward to the sequel!,1

@@ -1,0 +1,25 @@
+# Model Configuration
+
+# Model parameters
+model_name: "bert-base-uncased"
+num_labels: 2
+max_length: 128
+
+# Training parameters
+batch_size: 32
+learning_rate: 2e-5
+epochs: 3
+
+# Optimizer parameters
+weight_decay: 0.01
+adam_epsilon: 1e-8
+
+# Scheduler parameters
+warmup_steps: 500
+
+# Evaluation parameters
+eval_batch_size: 64
+
+# Interpretability parameters
+num_interpretation_samples: 100
+interpretation_method: "integrated_gradients"

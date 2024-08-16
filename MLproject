@@ -1,0 +1,49 @@
+name: xin_ai_Toolkit
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      data_path: {type: string, default: "data/raw/sample_data.csv"}
+      model_config: {type: string, default: "config/model_config.yaml"}
+    command: "python src/main.py --data_path {data_path} --model_config {model_config}"
+  
+  setup_spark:
+    parameters:
+      master_ip: {type: string, default: "localhost"}
+    command: "spark-submit --master spark://{master_ip}:7077 src/setup_spark.py"
+
+  setup_horovod:
+    parameters:
+      num_workers: {type: int, default: 4}
+    command: "horovodrun -np {num_workers} python src/setup_horovod.py"
+
+  start_mlflow:
+    parameters:
+      host: {type: string, default: "0.0.0.0"}
+      port: {type: string, default: "5000"}
+    command: "mlflow server --host {host} --port {port}"
+  
+  preprocess:
+    parameters:
+      data_path: {type: string, default: "data/raw/sample_data.csv"}
+    command: "python src/data_preprocessing.py --data_path {data_path}"
+  
+  train:
+    parameters:
+      data_path: {type: string, default: "data/processed/processed_data.parquet"}
+      model_config: {type: string, default: "config/model_config.yaml"}
+    command: "python src/model_training.py --data_path {data_path} --model_config {model_config}"
+  
+  evaluate:
+    parameters:
+      model_path: {type: string, default: "models/trained_model.pth"}
+      test_data_path: {type: string, default: "data/processed/test_data.parquet"}
+    command: "python src/model_evaluation.py --model_path {model_path} --test_data_path {test_data_path}"
+  
+  analyze:
+    parameters:
+      model_path: {type: string, default: "models/trained_model.pth"}
+      data_path: {type: string, default: "data/processed/test_data.parquet"}
+    command: "python src/interpretability_analysis.py --model_path {model_path} --data_path {data_path}"
