@@ -14,6 +14,17 @@ entry_points:
       master_ip: {type: string, default: "localhost"}
     command: "spark-submit --master spark://{master_ip}:7077 src/setup_spark.py"
 
+  start_spark_master:
+    command: "bash scripts/start-spark-master.sh"
+
+  start_spark_worker:
+    parameters:
+      master_host: {type: string, default: "localhost"}
+    command: "SPARK_MASTER_HOST={master_host} bash scripts/start-spark-worker.sh"
+
+  stop_spark_cluster:
+    command: "bash scripts/stop-spark-cluster.sh"
+    
   setup_horovod:
     parameters:
       num_workers: {type: int, default: 4}

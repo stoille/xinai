@@ -1,6 +1,22 @@
 # xᵢⁿai Research Toolkit
 
-This project (prounounced "zin-eye") is a lightweight toolkit for AI interpretability research, specifically designed to facilitate answering complex questions that require preprocessing large datasets and performing out-of-core distributed training. (e.g. "How does X impact Y in Z model architecture?") It provides an end-to-end pipeline for data handling, model training, and interpretability analysis, with a focus on scalability and reproducibility. Preprocessing leverages Spark while training is built upon Pytorch using Horovod as its distributed hardware accelerated training layer and MLFlow for logging and evaluation activities.
+This project (prounounced "zin-eye") is a lightweight toolkit for AI interpretability research, specifically designed to facilitate answering complex questions that require preprocessing large datasets and performing out-of-core training. It offers an end-to-end pipeline for data handling, model training, and interpretability analysis, with a focus on scalability and reproducibility.
+
+## Key Features
+
+- Scalable data preprocessing using Apache Spark
+- Distributed model training with Horovod
+- Integration with MLflow for experiment tracking and reproducibility
+- Interpretability analysis tools using Captum
+- Support for out-of-core training for large datasets and models
+- Comprehensive testing suite for ensuring reliability
+
+This toolkit is particularly suited for researchers and data scientists working on questions such as:
+- "How does model drift impact attention and response variance in transformer architectures?"
+- "What are the effects of different preprocessing techniques on model interpretability?"
+- "How do attention patterns in large language models evolve during fine-tuning on domain-specific tasks?"
+
+By providing a robust framework for handling large-scale data and models, this toolkit aims to accelerate research in AI interpretability and promote more transparent and understandable AI systems.
 
 ## Project Structure
 
