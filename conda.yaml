@@ -1,4 +1,4 @@
-name: xin_ai_env
+name: xinai_env
 channels:
   - conda-forge
   - pytorch

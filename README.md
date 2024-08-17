@@ -1,6 +1,6 @@
 # xᵢⁿai Research Toolkit
 
-This project (prounounced "zin-eye") is a lightweight toolkit for AI interpretability research, specifically designed to facilitate answering complex questions that require preprocessing large datasets and performing out-of-core training. It offers an end-to-end pipeline for data handling, model training, and interpretability analysis, with a focus on scalability and reproducibility.
+xinai is a lightweight toolkit for AI research, designed to facilitate answering complex questions that require preprocessing large datasets and performing out-of-core training. It offers an end-to-end pipeline for data handling, model training, and interpretability analysis, with a focus on scalability and reproducibility.
 
 ## Key Features
 
@@ -21,7 +21,7 @@ By providing a robust framework for handling large-scale data and models, this t
 ## Project Structure
 
 ```
-xin_ai/
+xinai/
 ├── MLproject
 ├── conda.yaml
 ├── CONTRIBUTING.md
@@ -61,22 +61,22 @@ xin_ai/
 
 1. Clone this repository:
    ```
-   git clone https://github.com/stoille/xin_ai.git
-   cd xin_ai
+   git clone https://github.com/stoille/xinai.git
+   cd xinai
    ```
 
 ## Setup
 
 1. Clone this repository:
    ```
-   git clone https://github.com/stoille/xin_ai.git
-   cd xin_ai
+   git clone https://github.com/stoille/xinai.git
+   cd xinai
    ```
 
 2. Create and activate the conda environment:
    ```
    conda env create -f conda.yaml
-   conda activate xin_ai_env
+   conda activate xinai_env
    ```
 
 3. Install the project in editable mode:

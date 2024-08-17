@@ -1,4 +1,4 @@
-name: xin_ai_Toolkit
+name: xinai_toolkit
 
 conda_env: conda.yaml
 
